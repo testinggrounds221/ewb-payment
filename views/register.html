@@ -1,0 +1,472 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="css/temp.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="images/tceewb.png" width="200" height="50" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a class="activepage" href="#">Register</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a class="signin">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- MultiStep Form -->
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form id="msform">
+          <!-- progressbar -->
+          <ul id="progressbar">
+            <li class="active">Personal Details</li>
+            <li>Interests</li>
+            <li>Files upload</li>
+            <li>Declaration</li>
+            <li>Payment</li>
+          </ul>
+          <h5 style="color: blue">Fields marked with * are required</h5>
+          <br />
+          <!-- fieldsets -->
+
+          <!-- Personal details -->
+          <fieldset id="pageone">
+            <h2 class="fs-title">Personal Details</h2>
+            <table cellspacing="10" width="100%">
+              <tr>
+                <td>
+                  <div class="dropdown">
+                    <select style="font-size: 15px">
+                      <option>Mr.</option>
+                      <option>Ms.</option>
+                      <option>Dr.</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="fname"
+                    name="fname"
+                    placeholder="First Name*"
+                    minlength="2"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="lname"
+                    name="lname"
+                    placeholder="Last Name*"
+                    minlength="2"
+                  />
+                </td>
+              </tr>
+            </table>
+            <h5 align="left">Date of Birth*</h5>
+            <input
+              type="date"
+              class="required"
+              id="dob"
+              name="dob"
+            /><br /><br />
+            <h5 align="left" style="word-spacing: 350px">Gender*</h5>
+            <table cellspacing="10" style="padding-right: 100px">
+              <th><h5>Male</h5></th>
+              <th><h5>Female</h5></th>
+              <tr>
+                <td>
+                  <input
+                    type="radio"
+                    class="required"
+                    id="male"
+                    name="gender"
+                    value="Male"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="radio"
+                    class="required"
+                    id="female"
+                    name="gender"
+                    value="Female"
+                  />
+                </td>
+              </tr>
+            </table>
+            <h5 align="left" style="word-spacing: 350px">Address</h5>
+            <table class="addressbar" cellspacing="10">
+              <th><h5 align="left">Present/Communication*</h5></th>
+              <th><h5 align="left">Permanent*</h5></th>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="tempadd"
+                    name="tempaddress"
+                    placeholder="Enter your address(max. 100)*"
+                    maxlength="100"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="permadd"
+                    name="permanentaddress"
+                    placeholder="Enter your address(max. 100)*"
+                    maxlength="100"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="tempcity"
+                    name="city"
+                    placeholder="City*"
+                  />
+                  <input
+                    type="text"
+                    class="required"
+                    id="temppin"
+                    name="pincode"
+                    placeholder="Pin code*"
+                    maxlength="6"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="permcity"
+                    name="city"
+                    placeholder="City*"
+                  />
+                  <input
+                    type="text"
+                    class="required"
+                    id="permpin"
+                    name="pincode"
+                    placeholder="Pin code*"
+                    maxlength="6"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="tempmobile"
+                    name="mobile"
+                    placeholder="Mobile number*"
+                    maxlength="10"
+                  />
+                  <input
+                    type="text"
+                    id="tempphone"
+                    name="phone"
+                    placeholder="Phone number"
+                  />
+                  <input
+                    type="email"
+                    class="required"
+                    id="tempemail"
+                    name="email"
+                    placeholder="E-mail (College mail) *"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="required"
+                    id="permmobile"
+                    name="mobile"
+                    placeholder="Mobile number(Parent) *"
+                    maxlength="10"
+                  />
+                  <input
+                    type="text"
+                    id="permphone"
+                    name="phone"
+                    placeholder="Phone number"
+                  />
+                  <input
+                    type="email"
+                    class="required"
+                    id="permemail"
+                    name="email"
+                    placeholder="E-mail (Personal) *"
+                  />
+                </td>
+              </tr>
+            </table>
+            <h5 align="center">Save</h5>
+            <input type="checkbox" id="saveone" class="required" />
+            <input
+              type="button"
+              id="btone"
+              name="next"
+              class="next action-button"
+              value="Next"
+              disabled
+            />
+          </fieldset>
+
+          <!-- General Information-->
+          <fieldset id="pagetwo">
+            <h2 class="fs-title">General Information</h2>
+            <table cellspacing="10" width="100%">
+              <tr>
+                <td>
+                  <div>
+                    <select
+                      style="font-size: 15px"
+                      class="required"
+                      id="course"
+                    >
+                      <option value="" disabled selected hidden>
+                        Course of Study*
+                      </option>
+                      <option value="B.E.(Civil Engineering)">
+                        B.E. (Civil Engineering)
+                      </option>
+                      <option value="B.E.(Computer Science and Engineering)">
+                        B.E. (Computer Science and Engineering)
+                      </option>
+                      <option
+                        value="B.E.(Electrical and Electronics Engineering)"
+                      >
+                        B.E. (Electrical and Electronics Engineering)
+                      </option>
+                      <option
+                        value="B.E.(Electronics and Communication Engineering)"
+                      >
+                        B.E. (Electronics and Communication Engineering)
+                      </option>
+                      <option value="B.E.(Mechanical Engineering)">
+                        B.E. (Mechanical Engineering)
+                      </option>
+                      <option value="B.E.(Mechatronics)">
+                        B.E. (Mechatronics)
+                      </option>
+                      <option
+                        value="B.Tech.(Computer Science and Business Systems)"
+                      >
+                        B.Tech. (Computer Science and Business Systems)
+                      </option>
+                      <option value="B.Tech.(Information Technology)">
+                        B.Tech. (Information Technology)
+                      </option>
+                      <option value="B.Arch.(Architecture)">
+                        B.Arch. (Architecture)
+                      </option>
+                      <option value="M.Sc.(Data Science)">
+                        M.Sc. (Data Science)
+                      </option>
+                    </select>
+                  </div>
+                </td>
+                <td align="center">
+                  <input
+                    type="text"
+                    class="required"
+                    id="comp"
+                    name="com"
+                    placeholder="Year of completion*"
+                  />
+                </td>
+              </tr>
+            </table>
+            <table cellspacing="10" width="75%">
+              <tr>
+                <td>
+                  <h4 align="left">
+                    Are you a member of any Social Organization or Professional
+                    Body?*
+                  </h4>
+                </td>
+                <td align="center">
+                  <h5>YES</h5>
+                  <input
+                    type="radio"
+                    class="required"
+                    id="yes"
+                    name="member"
+                    value="Yes"
+                  />
+                </td>
+                <td align="center">
+                  <h5>NO</h5>
+                  <input
+                    type="radio"
+                    class="required"
+                    id="no"
+                    name="member"
+                    value="No"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <input
+                    type="text"
+                    class="required"
+                    id="org"
+                    name="s1"
+                    placeholder="If yes, name of the organisation"
+                    disabled
+                  />
+                </td>
+              </tr>
+            </table>
+
+            <h4 align="left">Your interests/hobbies?</h4>
+            <br />
+            <table cellpadding="10px">
+              <tr>
+                <td style="padding-left: 20px">
+                  <input
+                    type="text"
+                    class="required"
+                    id="hobby"
+                    name="s1"
+                    placeholder="Interest/Hobby*"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-left: 20px">
+                  <input type="text" name="s2" placeholder="Interest/Hobby" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-left: 20px">
+                  <input type="text" name="s3" placeholder="Interest/Hobby" />
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-left: 20px">
+                  <input type="text" name="s4" placeholder="Interest/Hobby" />
+                </td>
+              </tr>
+            </table>
+            <h5 align="center">Save</h5>
+            <input type="checkbox" id="savetwo" class="required" />
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="Previous"
+            />
+            <input
+              type="button"
+              id="bttwo"
+              name="next"
+              class="next action-button"
+              value="Next"
+              disabled
+            />
+          </fieldset>
+
+          <!-- Files upload -->
+          <fieldset id="pagethree">
+            <h2 class="fs-title">Files Upload</h2>
+            <h3 class="fs-subtitle">
+              Upload your passport size photo and signature here
+            </h3>
+            <table cellspacing="10" width="100%">
+              <tr>
+                <td>
+                  <h4>Passport size photograph</h4>
+                  <input type="file" id="photo" name="photo" accept="image/*" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Signature</h4>
+                  <input type="file" id="sign" name="sign" accept="image/*" />
+                </td>
+              </tr>
+            </table>
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="Previous"
+            />
+            <input
+              type="button"
+              id="btthree"
+              name="next"
+              class="next action-button"
+              value="Next"
+              disabled
+            />
+          </fieldset>
+
+          <!-- Submit -->
+          <fieldset id="pagefour">
+            <h2 class="fs-title">Declaration</h2>
+            <h3 class="fs-subtitle">
+              Accept declaration and proceed to payment
+            </h3>
+            <div>
+              <h3 align="justify">
+                I have familiarized myself with the Mission, and objectives of
+                Engineers Without Borders - India on the EWB-INDIA website
+                (www.ewb-india.org) and I pledge to abide by the
+                responsibilities and obligations associated with EWB-INDIA
+                bonafide membership.
+              </h3>
+            </div>
+            <input
+              type="checkbox"
+              class="required"
+              id="agree"
+              name="declare"
+              value="Agreed"
+            />
+            <label for="declare"> I Agree</label><br />
+            <input
+              type="button"
+              name="previous"
+              class="previous action-button-previous"
+              value="Previous"
+            />
+            <input
+              type="submit"
+              id="submit"
+              name="submit"
+              class="submit action-button"
+              value="Submit"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- /.MultiStep Form -->
+    <!--jQuery-->
+    <script
+      src="https://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js"
+      type="text/javascript"
+    ></script>
+    <!--jQuery easing plugin-->
+    <script
+      src="https://thecodeplayer.com/uploads/js/jquery.easing.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript" src="js/temp.js"></script>
+  </body>
+</html>
